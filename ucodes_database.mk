@@ -185,6 +185,13 @@ OPTIONS := \
   CFG_XBUS
 $(eval $(call ucode_rule))
 
+NAME := F3DEX2_2.08H
+DESCRIPTION := Not in retail games; nearclipping added to F3DEX2_NoN_2.08H
+ID_STR := RSP Gfx ucode F3DEX       fifo 2.08H Yoshitaka Yasumoto 1999 Nintendo.
+OPTIONS := \
+  CFG_G_SPECIAL_1_IS_RECALC_MVP
+$(eval $(call ucode_rule))
+
 NAME := F3DEX2_NoN_2.08H
 DESCRIPTION := Pokemon Snap
 ID_STR := RSP Gfx ucode F3DEX.NoN   fifo 2.08H Yoshitaka Yasumoto 1999 Nintendo.
@@ -206,15 +213,24 @@ $(eval $(call ucode_rule))
 
 NAME := F3DEX2_NoN_2.08PL
 DESCRIPTION := Not in retail games; NoN added to F3DEX2_2.08PL
-ID_STR := RSP Gfx ucode F3DEX       fifo 2.08  Yoshitaka Yasumoto/Kawasedo 1999.
+ID_STR := RSP Gfx ucode F3DEX.NoN   fifo 2.08  Yoshitaka Yasumoto/Kawasedo 1999.
 OPTIONS := \
+  CFG_NoN \
+  CFG_POINT_LIGHTING
+$(eval $(call ucode_rule))
+
+NAME := F3DEX2_NoN_2.08HPL
+DESCRIPTION := Not in retail games; PL added to F3DEX2_NoN_2.08H
+ID_STR := RSP Gfx ucode F3DEX.NoN   fifo 2.08H Yoshitaka Yasumoto/Kawasedo 1999.
+OPTIONS := \
+  CFG_G_SPECIAL_1_IS_RECALC_MVP \
   CFG_NoN \
   CFG_POINT_LIGHTING
 $(eval $(call ucode_rule))
 
 NAME := F3DZEX_2.06H
 DESCRIPTION := Not in retail games; nearclipping added to F3DZEX_NoN_2.06H
-ID_STR := RSP Gfx ucode F3DZEX.NoN  fifo 2.06H Yoshitaka Yasumoto 1998 Nintendo.
+ID_STR := RSP Gfx ucode F3DZEX      fifo 2.06H Yoshitaka Yasumoto 1998 Nintendo.
 OPTIONS := \
   CFG_G_BRANCH_W \
   CFG_OLD_TRI_WRITE \
@@ -237,7 +253,7 @@ $(eval $(call ucode_rule))
 
 NAME := F3DZEX_2.08I
 DESCRIPTION := Not in retail games; nearclipping added to F3DZEX_NoN_2.08I
-ID_STR := RSP Gfx ucode F3DZEX.NoN  fifo 2.08I Yoshitaka Yasumoto/Kawasedo 1999.
+ID_STR := RSP Gfx ucode F3DZEX      fifo 2.08I Yoshitaka Yasumoto/Kawasedo 1999.
 OPTIONS := \
   CFG_G_BRANCH_W \
   CFG_POINT_LIGHTING \
@@ -258,7 +274,7 @@ $(eval $(call ucode_rule))
 
 NAME := F3DZEX_2.08J
 DESCRIPTION := Not in retail games; nearclipping added to F3DZEX_NoN_2.08J
-ID_STR := RSP Gfx ucode F3DZEX.NoN  fifo 2.08J Yoshitaka Yasumoto/Kawasedo 1999.
+ID_STR := RSP Gfx ucode F3DZEX      fifo 2.08J Yoshitaka Yasumoto/Kawasedo 1999.
 OPTIONS := \
   CFG_G_BRANCH_W \
   CFG_POINT_LIGHTING
